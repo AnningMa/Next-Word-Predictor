@@ -51,6 +51,7 @@ Data cleaning accounts for 70% of this project's success. The model was trained 
 Due to GitHub's file size limits, the raw dataset and the pre-trained **N-Gram Neural Network model** are hosted externally.
     
 **NGram Neural Network Model**: **https://drive.google.com/file/d/16VKFQj2tx8oRG_S2PaGGRkZu-p1Pjy3_/view?usp=drive_link**
+
 **Raw Data**: http://88milsms.huma-num.fr/corpus.html
 
 ---
