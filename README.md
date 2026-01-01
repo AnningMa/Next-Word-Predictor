@@ -21,7 +21,13 @@ The Winner: Introduces gating mechanisms (Input/Forget/Output gates) to maintain
 Result: Significantly reduced Perplexity (PPL) and improved Top-5 Accuracy.
 
 Performance Benchmark
-(See the chart below for the "staircase" improvement in accuracy)
+
+| **Model** | **Top-5 Accuracy** |
+| --------- | ------------------ |
+| N-Gram    | `28.70%`           |
+| NGram-NN  | `35.66%`           |
+| LSTM      | **`42.83%`**       |
+
 
 ## Engineering Trade-offs
 While Transformers achieve SOTA results, their $O(N^2)$ complexity creates high latency on edge devices. For a keyboard application, user experience requires response times under [X]ms. LSTM provides the best trade-off between capturing context and running efficiently on CPU.
