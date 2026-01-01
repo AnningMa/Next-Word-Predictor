@@ -1,6 +1,6 @@
 # Text Predictor: Next-Word Generation
 ## Overview
-This project implements a real-time next-word prediction engine designed to simulate mobile keyboard suggestions. It compares three distinct architectural approaches—Statistical N-Gram, Feed-Forward Neural Network (FFNN), and LSTM—to balance prediction accuracy with inference latency.
+This project implements a real-time next-word prediction engine designed to simulate mobile keyboard suggestions. It compares three distinct architectural approaches—Statistical N-Gram, Feed-Forward Neural Network , and LSTM—to balance prediction accuracy with inference latency.
 
 ## Model Evolution & Comparison
 We implemented and evaluated three models to demonstrate the evolution from statistical baselines to deep learning sequences.
@@ -16,7 +16,6 @@ Improvement: Solved the sparsity problem by introducing Word Embeddings, mapping
 Limitation: Fixed window size (Context Size = [N]) limits the ability to capture variable-length sentence structures.
 
 3. LSTM (Long Short-Term Memory)
-The Winner: Introduces gating mechanisms (Input/Forget/Output gates) to maintain long-distance dependencies.
 
 Result: Significantly reduced Perplexity (PPL) and improved Top-5 Accuracy.
 
@@ -32,11 +31,6 @@ Performance Benchmark
 ## Engineering Trade-offs
 While Transformers achieve SOTA results, their $O(N^2)$ complexity creates high latency on edge devices. For a keyboard application, user experience requires response times under [X]ms. LSTM provides the best trade-off between capturing context and running efficiently on CPU.
 
-Optimization:
-
-Inference Mode: Strict usage of torch.no_grad() to reduce memory footprint.
-
-Tensor Handling: Optimized input pipeline to handle variable batch sizes.
 
 ## Adaptive Personalization
 Standard models fail to capture specific user habits. We solved this using Dynamic Interpolation.
